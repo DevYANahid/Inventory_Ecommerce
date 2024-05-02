@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome/css/all.min.css')}}">
 
 <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+@yield('style')
 </head>
 <body>
 <div id="global-loader">
@@ -28,9 +29,9 @@
 </div>
 
 <div class="main-wrapper">
-
+@include('admin.layouts.header')
     @yield('content')
-
+@include('admin.layouts.footer')
 </div>
 
 
@@ -49,5 +50,6 @@
 <script src="{{asset('assets/plugins/apexchart/chart-data.js')}}"></script>
 
 <script src="{{asset('assets/js/script.js')}}"></script>
+@yield('script')
 </body>
 </html>
