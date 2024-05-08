@@ -1,10 +1,14 @@
 @if (!empty(session('success')))
-<div class="alert alert-success" role="alert">
-    {{session('success')}}
-</div> 
+<div class="d-flex flex-row-reverse">
+    <div class="alert alert-success alert-dismissible fade show col-lg-3" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        {{session('success')}}
+    </div> 
+</div>
 @endif
 @if (!empty(session('error')))
 <div class="alert alert-danger" role="alert">
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     {{session('error')}}
 </div> 
 @endif

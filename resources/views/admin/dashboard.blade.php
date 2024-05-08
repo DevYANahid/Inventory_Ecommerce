@@ -4,7 +4,15 @@
 
 
 @section('content')
-
+  
+<div class="page-wrapper">
+    <div class="content">
+    <div class="row">
+    <div class="col-lg-3 col-sm-6 col-12">
+    <div class="dash-widget">
+    <div class="dash-widgetimg">
+    <span><img src="{{asset('')}}assets/img/icons/dash1.svg" alt="img"></span>
+    </div>
 <div class="dash-widgetcontent">
 <h5>$<span class="counters" data-count="307144.00">$307,144.00</span></h5>
 <h6>Total Purchase Due</h6>

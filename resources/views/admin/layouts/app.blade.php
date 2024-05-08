@@ -7,7 +7,7 @@
 <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern,  html5, responsive">
 <meta name="author" content="Dreamguys - Bootstrap Admin Template">
 <meta name="robots" content="noindex, nofollow">
-<title>Dreams Pos admin template</title>
+<title>{{!empty($header_title)? $header_title : ''}} - SHOPTYCODE</title>
 
 <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/favicon.jpg')}}">
 
@@ -25,7 +25,7 @@
 </head>
 <body>
 <div id="global-loader">
-<div class="whirly-loader"> </div>
+{{-- <div class="whirly-loader"> </div> --}}
 </div>
 
 <div class="main-wrapper">
