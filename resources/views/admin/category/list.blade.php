@@ -41,8 +41,8 @@
         <td>{{$value->meta_keywords}}</td>
         <td>{{$value->created_by_name}}</td>
         <td><span class="{{($value->status == 0) ? 'bg-lightgreen badges' : 'bg-lightred badges'}}">{{($value->status == 0) ? 'Active' : 'Inactive'}}</span></td>
-        <td>
         <td>{{date('d-m-y', strtotime($value->created_at)) }}</td>
+        <td>
         <a class="me-3" href="{{url('admin/category/edit/'.$value->id)}}">
         <img src="{{asset('')}}assets/img/icons/edit.svg" alt="img">
         </a>

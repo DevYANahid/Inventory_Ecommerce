@@ -6,8 +6,8 @@
     <div class="content">
     <div class="page-header">
     <div class="page-title">
-    <h4>Admin Management</h4>
-    <h6>Edit Admin</h6>
+    <h4>Product Management</h4>
+    <h6>Edit Category</h6>
     </div>
     </div>
     <form action="" method="post">
@@ -15,34 +15,39 @@
     <div class="card">
     <div class="card-body">
     <div class="row">
-    <div class="col-lg-6 col-sm-6 col-12">
+    <div class="col-lg-12 col-sm-6 col-12">
     <div class="form-group">
-    <label>Name</label>
-    <input type="text" value="{{old('name',$getRecord->name)}}" required name="name" placeholder="Enter Name">
-    </div>
-    <div class="form-group">
-    <label>Email</label>
-    <input type="text"  value="{{old('email',$getRecord->email)}}" required name="email" placeholder="Enter Email">
+    <label>Category Name</label>
+    <input type="text" value="{{old('name', $getRecord->name)}}" required name="name" placeholder="Enter Name">
     </div>
     <div class="form-group">
-    <label>Password</label>
-    <div class="pass-group">
-    <input type="password" class=" pass-input" name="password" placeholder="Password">
-    <span class="fas toggle-password fa-eye-slash"></span>
-    
+    <label>Slug<span style="color: red">*</span></label>
+    <input type="text"  value="{{old('slug',$getRecord->slug)}}" required name="slug" placeholder="Enter slug">
     </div>
-    <p>Do You Want To change Password so Please Add</p>
+    <div class="form-group" >
+        <label >Status <span style="color: red">*</span></label>
+        <select class="form-control" name="status">
+          <option {{(old('status',$getRecord->status) == 0) ? 'selected' : ''}} value="0">Active</option>
+          <option {{(old('status',$getRecord->status) == 1) ? 'selected' : ''}} value="1">Inactive</option>
+        </select>
     </div>
+      <div class="form-group">
+        <label> Meta Title <span style="color: red">*</span></label>
+        <input type="text" class="form-control" value="{{old('meta_title',$getRecord->meta_title)}}" name="meta_title" placeholder="Enter Meta Title">
+      </div>
+      <div class="form-group">
+        <label> Meta Description</label>
+        <textarea type="text" class="form-control" value="{{old('meta_description',$getRecord->meta_description)}}"  name="meta_description" placeholder="Enter Meta Description"></textarea>
+      </div>
+      <div class="form-group">
+        <label> Meta Keywords</label>
+        <input type="text" class="form-control" value="{{old('meta_keywords',$getRecord->meta_keywords)}}"  name="meta_keywords" placeholder="Enter Meta Keywords">
+      </div>
     </div>
-    <div class="col-lg-3 col-sm-6 col-12">
-        <select class="form-control m-4" name="status">
-            <option {{($getRecord->status == 0) ? 'selected' : ''}} value="0">Active</option>
-            <option {{($getRecord->status == 1) ? 'selected' : ''}} value="1">Inactive</option>
-          </select>
     </div>
     <div class="col-lg-12">
-    <button type="submit" class="btn btn-submit me-2">Submit</button>
-    <a href="{{url('admin/admin/list')}}" class="btn btn-cancel">Cancel</a>
+    <button type="submit" class="btn btn-submit me-2">Update</button>
+    <a href="{{url('admin/category/list')}}" class="btn btn-cancel">Cancel</a>
     </div>
     </div>
     </div>
