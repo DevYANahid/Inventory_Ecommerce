@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->boolean('is_admin')->default(0)->comment('1:admin,0:user ');
             $table->boolean('status')->default(0)->comment('0:active');
-            $table->boolean('is_deleted')->default(1)->comment(' 1: not deleted,0:deleted');
+            $table->boolean('is_delete')->default(1)->comment(' 1: not deleted,0:deleted');
             $table->rememberToken();
             $table->timestamps();
         });
