@@ -16,6 +16,15 @@ use App\Http\Controllers\AuthController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+
+Route::get('/', function () {
+    return view('Frontend.home');
+});
+Route::get('/blog_details', function () {
+    return view('Frontend.blogdetails');
+});
 Route::get('admin',[AuthController::class,'admin_login']);
 Route::post('admin',[AuthController::class,'auth_admin_login']);
 Route::get('admin/logout',[AuthController::class,'admin_logout']);
