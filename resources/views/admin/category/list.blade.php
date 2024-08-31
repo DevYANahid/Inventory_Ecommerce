@@ -6,8 +6,8 @@
     <div class="content">
     <div class="page-header">
     <div class="page-title">
-    <h4>Admin List</h4>
-    <h6>Manage your Admin</h6>
+    <h4>Category List</h4>
+    <h6>Manage your Blog Category</h6>
     </div>
     <div class="page-btn">
     <a href="{{url('admin/category/add')}}" class="btn btn-added"><img src="{{asset('')}}assets/img/icons/plus.svg" alt="img" class="me-1">Add New Category</a>

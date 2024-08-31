@@ -190,10 +190,17 @@
     <a href="{{url('admin/dashboard')}}"><img src="{{asset('')}}assets/img/icons/dashboard.svg" alt="img"><span> Dashboard</span> </a>
     </li>
     <li class="submenu">
-    <a href="javascript:void(0);"><img src="{{asset('')}}assets/img/icons/product.svg" alt="img"><span> Blog</span> <span class="menu-arrow"></span></a>
+        <a href="javascript:void(0);"><img src="{{asset('')}}assets/img/icons/product.svg" alt="img"><span> Blog</span> <span class="menu-arrow"></span></a>
+        <ul>
+        <li><a href="{{url('admin/blog/list')}}">Blog List</a></li>
+        <li><a href="{{url('admin/blog/add')}}">Add Blog</a></li>
+        </ul>
+        </li>
+    <li class="submenu">
+    <a href="javascript:void(0);"><img src="{{asset('')}}assets/img/icons/product.svg" alt="img"><span> Blog Category</span> <span class="menu-arrow"></span></a>
     <ul>
-    <li><a href="{{url('admin/category/list')}}">Blog List</a></li>
-    <li><a href="{{url('admin/category/add')}}">Add Blog</a></li>
+    <li><a href="{{url('admin/category/list')}}">Blog Category List</a></li>
+    <li><a href="{{url('admin/category/add')}}">Add Blog Category</a></li>
     </ul>
     </li>
     <li class="submenu">
